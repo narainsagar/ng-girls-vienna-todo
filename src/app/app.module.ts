@@ -7,6 +7,7 @@ import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.
 import { ListManagerComponent } from './list-manager/list-manager.component';
 import { TodoListService } from './services/todo-list.service';
 import { StorageService } from './services/storage.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StorageService } from './services/storage.service';
     ListManagerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [TodoListService, StorageService],
   bootstrap: [AppComponent]
