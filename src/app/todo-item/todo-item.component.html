@@ -4,7 +4,7 @@
     {{ item.title }}
   </span>
   <ng-template #editTemp>
-    <input type="text" [formControl]="newTitle" />
+    <input type="text" [formControl]="newTitle" (keyup.enter)="editItem()" />
   </ng-template>
   <button class="btn-blue" (click)="editItem()">
     {{ isEditing ? 'save' : 'edit' }}
